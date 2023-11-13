@@ -4,7 +4,7 @@
 , libX11, libGLU, libGL, libXpm, libXext, libXxf86vm
 }:
 
-let etterna-unwrapped = stdenv.mkDerivation {
+stdenv.mkDerivation {
   pname = "etterna";
   version = "0.73-dev";
 
@@ -52,7 +52,4 @@ let etterna-unwrapped = stdenv.mkDerivation {
     # never built on aarch64-linux since first introduction in nixpkgs
     broken = stdenv.isLinux && stdenv.isAarch64;
   };
-};
-in {
-  
 }
